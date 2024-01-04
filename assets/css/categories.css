@@ -1,0 +1,245 @@
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* navbar css starts */
+nav{
+    background-color: rgb(51, 139, 190);
+    height: 100px;
+}
+
+
+#logo{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(116, 23, 23);
+    -webkit-text-stroke: 0.06vw #f0e65e;
+    font-size: 45px;
+}
+
+#logo1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #f0e65e;
+    -webkit-text-stroke: 0.06vw rgb(116, 23, 23);
+    font-size: 45px;
+}
+.navbar-item a{
+    margin-top: 20px;
+    padding: 0 20px;
+    text-decoration: none;
+    color: white;
+    font-size: large;
+}
+
+.navbar-item::after{
+    content: '';
+    width: 0;
+    height: 5px;
+    display: block;
+    margin: 3px auto;
+    background: red;
+    transition: 0.75s;
+}
+
+.navbar-item:hover::after{
+    width: 100%;
+}
+
+#dropdown-itemss
+{
+    color: black;
+}
+/* navbar css ends */
+ 
+
+#head1
+{
+    width: 25%;
+    cursor: pointer;
+    margin-top: 60px;
+    font-size: 50px;
+    font-weight: 700;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 20px 0;
+    transition: 0.5s;
+}
+#head1:hover
+{
+    border: 2px solid blueviolet;
+    border-radius: 60px;
+    background-color: red;
+    color: white;
+}
+
+
+.bod
+{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+
+}
+.container
+{
+    position: relative;
+    width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.container .card
+{
+    width: 100%;
+    border: 2px solid black;
+    background: #fff;
+}
+.container .card .imgBx
+{
+    position: relative;
+    width: 100%;
+    height: 400PX;
+    overflow: hidden;
+}
+.container .card .imgBx img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease-in-out;
+    transform-origin: right;
+}
+.container .card:hover .imgBx img
+{
+    transform: scale(1.5);
+
+}
+.action
+{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.action li
+{
+    position: relative;
+    list-style: none;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4px;
+    cursor: pointer;
+    transition: transform 0.5s;
+    transform: translateX(60px);
+}
+.action li:nth-child(2)
+{
+    transition-delay: 0.15s;
+}
+.action li:nth-child(3)
+{
+    transition-delay: 0.3s;
+}
+.container .card:hover .action li
+{
+    transform: translateX(0px);
+}
+.action li:hover
+{
+    background: #ff2020;
+    color: #fff;
+}
+.action li span
+{
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%) translateX(-20px);
+    white-space: nowrap;
+    padding: 4px 6px;
+    background: #fff;
+    color: #333;
+    font-weight: 500;
+    font-size: 12px;
+    border-radius: 4px;
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.5s;
+}
+.action li:hover span
+{
+    transform: translateY(-50%) translateX(0px);
+    opacity: 1;
+}
+.action li span::before
+{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -4px;
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    transform: translateY(-50%) rotate(45deg);
+}
+.container .card .content
+{
+    padding: 10px;
+}
+.container .card .content .productname h3
+{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    margin: 10px 0;
+}
+.container .card .content .price_rating
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container .card .content .price_rating h2
+{
+    font-size: 20px;
+    color: #ff2020;
+    font-weight: 500;
+    cursor: pointer;
+}
+.container .card .content .price_rating .fa
+{
+    color: #ffd513;
+    cursor: pointer;
+}
+.container .card .content .price_rating .grey
+{
+    color: #ccc;
+}
+
+
+
+
+@media (max-width: 450px) {
+    .navbar-brand #logo,
+    #logo1
+    {
+        font-size: 30px;
+    }
+}
